@@ -39,12 +39,36 @@ for (i in 1:nrow(scoreMSU)){
 
 #generating graph!
 #setting axes
-x=scoreUW$time
-y=scoreUW$score
+x<-scoreUW$time
+y<-scoreUW$score
 #creating graph with UW Data
 plot(x,y,"l",col="red",xlab = "Time",ylab = "Score",main = "UW-MSU ScoreTracker")
 #adding MSU Data
-x2=scoreMSU$time
-y2=scoreMSU$score
+x2<-scoreMSU$time
+y2<-scoreMSU$score
 #adding line for MSU
 lines(x2,y2,col="dark green")
+
+###  QUESTION 2  ###
+#create a game "Guess my number" for random numer 1:100
+
+number=1:100 #vector for possible answers
+
+Guess=sample(number,1) #generates a random number
+
+#start of the game
+cat("I'm thinking of number between 1 and 100...")
+
+for (i in 1:10){
+  response<-readline(prompt = "Guess: ")
+  if (response==Guess){
+    cat("Correct")
+  }else if (response>Guess){
+    cat("Higher")
+  }else if (response<Guess){
+    cat("Lower")
+  }
+}
+
+#need to look at because I keep getting "Lower" no matter the number I enter
+
