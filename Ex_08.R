@@ -63,12 +63,12 @@ for (i in 1:10){
   response<-readline(prompt = "Guess: ")
   if (response==Guess){
     cat("Correct")
-  }else if (response>Guess){
-    cat("Higher")
-  }else if (response<Guess){
+  }else if(response>Guess){
     cat("Lower")
+  }else if(response<Guess){
+    cat("Higher")
   }
 }
 
-#need to look at because I keep getting "Lower" no matter the number I enter
+
 
