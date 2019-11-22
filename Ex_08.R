@@ -27,4 +27,12 @@ for (i in 1:nrow(scoreUW)){
   scoreUW$score[i]=cumScoreUW #replaces scores with cumulative score
 }
 
+#final UW score is 50, need to see what error might be
 
+#MSU for-loop to generate cumulative score
+for (i in 1:nrow(scoreMSU)){
+  cumScoreMSU<-cumScoreMSU+scoreMSU$score[i]
+  scoreMSU$score[i]=cumScoreMSU
+}
+
+#final MSU score is correct at 49
